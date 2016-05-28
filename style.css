@@ -1,0 +1,127 @@
+body {
+	background-color: #ffffcc;
+	position: relative;
+	
+}
+
+.text {
+	top: 35px;
+    left: 0;
+	right: 0;
+	width: 600px;
+	margin: auto;
+	padding: 2%;
+	background-color: #ffcccc;
+	color: white;
+	font-family: "Comic Sans MS";
+	border-radius: 8px;
+	overflow: hidden;
+	position: absolute;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+	margin-left: 75%;
+	font-family: "Comic Sans MS";
+	font-weight: medium;
+	font-size: 12px;
+	background-color: white;
+	color: turquoise;
+	border: turquoise;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+button:hover {
+	background-color: turquoise;
+	color: white;
+}
+
+#game {
+	margin: auto;
+	width: 700px;
+	height: 600px;
+	top: 15px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	overflow: hidden;
+	background: white;
+}
+
+#score {
+	position: absolute;
+}
+
+meter {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-transform: rotate(270deg);
+	width: 550px;
+	height: 45px;
+	position: absolute;
+	bottom: 235px;
+
+}
+
+#energy {
+	
+	right: 55%;
+}
+
+#corruption {
+	left: 55%;
+
+}
+
+meter::-webkit-meter-bar {
+	background: white;
+	border-radius: 4px;
+	
+}
+
+
+#energy::-webkit-meter-optimum-value {
+	background: #00ff59;
+	border-radius: 4px;
+}
+
+#energy::-webkit-meter-suboptimum-value {
+	background: #63ff97;
+	border-radius: 4px;
+}
+
+#energy::-webkit-meter-even-less-good-value {
+	background: #91fab4;
+	border-radius: 4px;
+}
+
+
+#corruption::-webkit-meter-optimum-value {
+	background: #ff8c00;
+	border-radius: 4px;
+}
+
+#corruption::-webkit-meter-suboptimum-value {
+	background: #ffc533;
+	border-radius: 4px;
+}
+
+#corruption::-webkit-meter-even-less-good-value {
+	background: #ffde8a;
+	border-radius: 4px;
+}
+
+#n_g_bar {
+	position: absolute;
+	left: 100px;
+	bottom: 50px;
+}
+
+#trump {
+	position: absolute;
+	right: 100px;
+	bottom: 50px;
+}

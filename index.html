@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jeb! Simulator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="text" id="intro">
+	<p>
+		You're Jeb! of House Bush. You live in Florida. You might be wearing boring-person glasses, but you know, so what? Life isn't all about being a cool-guy. A lot of it's about whining, about standing next to a window and looking out of it at a golf course, about going to bed early and getting the rest you need to be depressed.
+	</p>
+	<p>	
+		Suddenly, it's 2016 and everyone at the country club's talking to you.
+		They're saying, "Jeb!, look at these whack-jobs, are you really going to let one of these whack-jobs become the-president-after-the-president-after-your-brother, the-president-after-the-president-after-the-president-after-the-president-after-your-dad?" It doesn't feel like you can tell your friends the truth, which is that, much like the rest of your family, you don't particularly want to be The President. It's not a decision, but you make it anyway. You'll let the mega-donors elect you president, if that's what they want to do.
+	</p>
+	<p>
+		So here you are. You've got a logo. Now all that's left to do is be elected president. Or so you thought. If you had known you'd be getting personally insulted by Donald Trump, left in the polls' dust by Donald Trump, you would have pretended you were in a coma, harder.
+	</p>
+	<p>
+		Unfortunately for you, Jeb!, only Donald Trump and other transdimensional aliens can affect the past.
+    </p>
+    <button>OK !</button>
+    </div>
+    
+    <div class="text" id="instructions">
+    <p>
+    	Who will prevent the co-optation of the GOP by a viral-entity feigning sentience? Jeb! will!
+
+    	Please clap.
+
+    	See how long you can stem the spread of transdimensional corruption, before physical laws start contradicting themselves, by clicking on The Donald. Don't stop! Keep clicking!
+
+    	Uh-oh, though: with all this clicking, Jeb!'s low on energy. Don't forget to stop and peel (click on) a delicious Nutri-Grain Bar, or you might get irritable, say something whiny and tank your chances as humanity's savior.
+
+    	Good luck!
+    </p>
+    <button>START</button>
+    </div>
+
+    <div id="game">
+    	<p id="score">Score: 0</p>
+    	<img id="n_g_bar" src="/Users/masonseale/Development/TrumpGame/images/n_g_bar.png">
+    	<img id="trump" src="/Users/masonseale/Development/TrumpGame/images/trump.png" >
+    	<meter id="energy" min="0" max="100" low="25" high="75" optimum="100" value="100">Energy</meter>
+    	<meter id="corruption" min="0" max="100" low="25" high="75" optimum="100" value="0">Transdimensional Corruption</meter>
+    </div>
+    
+    <div class="text" id="game_over">
+        <p id="message"></p>
+        <p id="final_score">0</p>
+        <button id="try_again">TRY AGAIN !</button>
+    </div>
+      
+	<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+	<script type="text/javascript" src="trumpgame.js"></script>
+</body>
+</html>
