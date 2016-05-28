@@ -1,7 +1,52 @@
 body {
 	background-color: #ffffcc;
 	position: relative;
-	
+}
+
+#title_screen, #game {
+	margin: auto;
+	width: 700px;
+	height: 550px;
+	top: 35px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	overflow: hidden;
+	background: white;
+}
+
+#jeb {
+	position: absolute;
+	bottom: 20%;
+	left: 40px;
+}
+
+#title_screen text {
+	color: rgb(202,35,43);
+	position: absolute;
+	font-size: 60px;
+	font-family: "Baskerville";
+	font-weight: bolder;
+	bottom: 20%;
+	right: 50px;
+}
+
+#title_screen button {
+	width: 98px;
+	height: 48px;
+	position: absolute;
+	font-family: "Baskerville";
+	font-weight: bolder;
+	font-size: 40px;
+	color: transparent;
+	background-color: transparent;
+	bottom: 350px;
+	right: 480px;
+}
+
+#title_screen button:hover {
+	background-color: transparent;
+	color: rgb(202,35,43);
 }
 
 .text {
@@ -17,6 +62,7 @@ body {
 	border-radius: 8px;
 	overflow: hidden;
 	position: absolute;
+	display: none;
 }
 
 button {
@@ -39,19 +85,16 @@ button:hover {
 }
 
 #game {
-	margin: auto;
-	width: 700px;
-	height: 600px;
-	top: 15px;
-	left: 0;
-	right: 0;
-	position: absolute;
-	overflow: hidden;
-	background: white;
+	display: none;
 }
 
 #score {
+	font-family: "Comic Sans MS";
+	font-size: 48px;
 	position: absolute;
+	left: 210px;
+	top: 30px;
+
 }
 
 meter {
@@ -59,7 +102,7 @@ meter {
 	-moz-appearance: none;
 	appearance: none;
 	-webkit-transform: rotate(270deg);
-	width: 550px;
+	width: 500px;
 	height: 45px;
 	position: absolute;
 	bottom: 235px;
@@ -68,11 +111,11 @@ meter {
 
 #energy {
 	
-	right: 55%;
+	right: 60%;
 }
 
 #corruption {
-	left: 55%;
+	left: 60%;
 
 }
 
@@ -84,33 +127,33 @@ meter::-webkit-meter-bar {
 
 
 #energy::-webkit-meter-optimum-value {
-	background: #00ff59;
+	background: rgb(202,35,43);
 	border-radius: 4px;
 }
 
 #energy::-webkit-meter-suboptimum-value {
-	background: #63ff97;
+	background: #e05259;
 	border-radius: 4px;
 }
 
 #energy::-webkit-meter-even-less-good-value {
-	background: #91fab4;
+	background: #e87d82;
 	border-radius: 4px;
 }
 
 
 #corruption::-webkit-meter-optimum-value {
-	background: #ff8c00;
+	background: #ffa64d;
 	border-radius: 4px;
 }
 
 #corruption::-webkit-meter-suboptimum-value {
-	background: #ffc533;
+	background: #ffbf80;
 	border-radius: 4px;
 }
 
 #corruption::-webkit-meter-even-less-good-value {
-	background: #ffde8a;
+	background: #ffcc99;
 	border-radius: 4px;
 }
 

@@ -5,6 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div id="title_screen">
+    <img id="jeb" src="./images/jeb.jpeg">
+    <text>Simulator!</text>
+    <button>Play!</button>
+    </div>
+
 	<div class="text" id="intro">
 	<p>
 		You're Jeb! of House Bush. You live in Florida. You might be wearing boring-person glasses, but you know, so what? Life isn't all about being a cool-guy. A lot of it's about whining, about standing next to a window and looking out of it at a golf course, about going to bed early and getting the rest you need to be depressed.
@@ -39,19 +45,19 @@
 
     <div id="game">
     	<p id="score">Score: 0</p>
-    	<img id="n_g_bar" src="/Users/masonseale/Development/TrumpGame/images/n_g_bar.png">
-    	<img id="trump" src="/Users/masonseale/Development/TrumpGame/images/trump.png" >
-    	<meter id="energy" min="0" max="100" low="25" high="75" optimum="100" value="100">Energy</meter>
-    	<meter id="corruption" min="0" max="100" low="25" high="75" optimum="100" value="0">Transdimensional Corruption</meter>
+    	<img id="n_g_bar" src="./images/n_g_bar.png">
+    	<img id="trump" src="./images/trump.png">
+    	<meter id="energy" min="0" max="1000" low="300" high="800" optimum="1000" value="1000">Energy</meter>
+    	<meter id="corruption" min="0" max="1000" low="300" high="800" optimum="1000" value="0">Transdimensional Corruption</meter>
     </div>
     
     <div class="text" id="game_over">
         <p id="message"></p>
         <p id="final_score">0</p>
-        <button id="try_again">TRY AGAIN !</button>
+        <button>TRY AGAIN !</button>
     </div>
       
 	<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
-	<script type="text/javascript" src="trumpgame.js"></script>
+	<script type="text/javascript" src="jeb-sim.js"></script>
 </body>
 </html>
