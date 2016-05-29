@@ -1,5 +1,18 @@
 var score = 0;
 
+var highScore = findHighScore();
+
+function findHighScore() {
+	var hs = "0 (nobody)";
+	for (i in localStorage) {
+		if (hs < localStorage[i]) {
+			hs = localStorage[i] + " (" + i + ")";
+		};
+	};
+	return hs;
+}
+
+
 var energy_quotes = [
 	"Ok, now this is ridiculous.", 
 	"My brother was building a security apparatus to keep us safe, and I'm proud of what he did.", 
@@ -77,11 +90,28 @@ function gameEnds(outcome) {
 
 	$("#final_score").text("Your Score = " + score);
 	$("#game_over").show();
+	if (newHighScore()) {
+		var name = prompt("What's your name?");
+		localStorage.setItem(name, score);
+		highScore = score.toString() + " (" + name + ")";
+	};
+	$("#high_score").text("High Score = " + highScore);
 }
+//var name = document.getElementById("name");
 
 function getRandomQuote() {
 	var randomQuote = Math.floor(Math.random()*(energy_quotes.length));
 	return energy_quotes[randomQuote];
+}
+
+//check if score is new high score
+function newHighScore() {
+	for (var i in localStorage) {
+		if (score < localStorage[i]) {
+			return false;
+		};
+	};
+	return true;
 }
 
 //resets variables and calls play again
@@ -99,6 +129,9 @@ function resetGame() {
 }
 
 
+//buttons and other click events
+
+//click Play! to transition to intro text
 $("#title_screen button").click(function() {
 	$(this).parent().hide();
 	$("#intro").show();
