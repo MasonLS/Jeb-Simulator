@@ -1,10 +1,10 @@
 var score = 0;
 
-var highScore = findHighScore();
+var highScore = currentHighScore();
 
-function findHighScore() {
-	var hs = "0 (nobody)";
-	for (i in localStorage) {
+function currentHighScore () {
+	var hs = 0;
+	for (var i in localStorage) {
 		if (hs < localStorage[i]) {
 			hs = localStorage[i] + " (" + i + ")";
 		};
@@ -89,15 +89,17 @@ function gameEnds(outcome) {
 	};
 
 	$("#final_score").text("Your Score = " + score);
-	$("#game_over").show();
-	if (newHighScore()) {
-		var name = prompt("What's your name?");
-		localStorage.setItem(name, score);
-		highScore = score.toString() + " (" + name + ")";
+
+	if (!newHighScore()) {
+		$("#game_over").children("#new_high_score").hide();
+	} else {
+		$("#name").show();
+		$("#new_high_score").show();
 	};
-	$("#high_score").text("High Score = " + highScore);
+
+	$("#game_over").show();
+	
 }
-//var name = document.getElementById("name");
 
 function getRandomQuote() {
 	var randomQuote = Math.floor(Math.random()*(energy_quotes.length));
@@ -106,8 +108,8 @@ function getRandomQuote() {
 
 //check if score is new high score
 function newHighScore() {
-	for (var i in localStorage) {
-		if (score < localStorage[i]) {
+	for (i in localStorage) {
+		if (score <= localStorage[i]) {
 			return false;
 		};
 	};
@@ -123,11 +125,25 @@ function resetGame() {
 	$("#energy").prop("value", energy_level);
 	corruption_level = corruption_min;
 	$("#corruption").prop("value", corruption_level);
+	$("#name input").val("");
 	$("#game_over").hide();
 	$("#game").show();
 	play();
 }
 
+//sets current high score
+$("#high_score").text("High Score = " + highScore);
+
+//handles high score name entry and update
+$("#name").keyup(function() {
+	if (event.which == 13) {
+		$(this).hide();
+		var name = $("#name input").val();
+		localStorage.setItem(name, score);
+		highScore = score.toString() + " (" + name + ")";
+		$("#high_score").text("High Score = " + highScore);
+	};
+});
 
 //buttons and other click events
 
