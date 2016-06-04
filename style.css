@@ -1,11 +1,38 @@
 body {
-	background-color: #ffffcc;
 	position: relative;
+}
+
+#wrapper {
+	margin: auto;
+	background-color: #ffffcc;
+	width: 1200px;
+	height: 700px;
+	position: relative;
+}
+
+#left_flamingo {
+	width: 210px;
+	height: 300px;
+	color: white;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #ffcccc;
+}
+
+
+#right_flamingo {
+	width: 210px;
+	height: 300px;
+	top: 380px;
+	left: 980px;
+	position: absolute;
+	color: #ffcccc;
 }
 
 #title_screen, #game {
 	margin: auto;
-	width: 700px;
+	width: 60%;
 	height: 550px;
 	top: 35px;
 	left: 0;
@@ -40,8 +67,8 @@ body {
 	font-size: 40px;
 	color: transparent;
 	background-color: transparent;
-	bottom: 340px;
-	right: 480px;
+	bottom: 346px;
+	right: 505px;
 }
 
 #title_screen button:hover {
@@ -53,12 +80,10 @@ body {
 	top: 35px;
     left: 0;
 	right: 0;
-	width: 700px;
+	width: 60%;
 	margin: auto;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	padding-left: 4%;
-	padding-right: 4%;
+	padding-top: 15px;
+	padding-bottom: 10px;
 	background-color: #ffcccc;
 	color: white;
 	font-family: "Comic Sans MS";
@@ -66,7 +91,15 @@ body {
 	overflow: hidden;
 	position: absolute;
 	display: none;
-	font-size: 18px;
+	font-size: 17px;
+}
+
+.text p, h1, label {
+	
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 26px;
+
 }
 
 button {
@@ -81,7 +114,7 @@ button {
 	border: turquoise;
 	cursor: pointer;
 	border-radius: 6px;
-	margin-bottom: 2%;
+	margin-bottom: 10px;
 }
 
 button:hover {
@@ -117,7 +150,7 @@ input:focus {
 	font-family: "Comic Sans MS";
 	font-size: 48px;
 	position: absolute;
-	left: 210px;
+	left: 230px;
 	top: 30px;
 
 }
@@ -184,12 +217,12 @@ meter::-webkit-meter-bar {
 
 #n_g_bar {
 	position: absolute;
-	left: 100px;
-	bottom: 50px;
+	left: 160px;
+	bottom: 100px;
 }
 
 #trump {
 	position: absolute;
-	right: 100px;
+	right: 160px;
 	bottom: 50px;
 }
